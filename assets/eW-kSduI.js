@@ -1,1 +1,409 @@
-import{c as b,h as y,e as u,j as e,m as h,N as m,O as f,U as j,F as v,L as z,x as S,P as k,M as W,T as R,Z as w}from"./0Dmh-Cmn.js";import{D as B}from"./DD9mmw5L.js";const T=[["path",{d:"m15 18-6-6 6-6",key:"1wnfg3"}]],I=b("chevron-left",T),D={hidden:{opacity:0,y:22},show:o=>({opacity:1,y:0,transition:{delay:o*.06,duration:.45,ease:[.16,1,.3,1]}})};function a({icon:o,title:s,children:c,index:g,accent:x,border:n,cardBg:i,textMain:d,textSub:l}){return e.jsxs(h.div,{custom:g,initial:"hidden",whileInView:"show",viewport:{once:!0,margin:"-60px"},variants:D,style:{background:i,border:`1px solid ${n}`,borderRadius:"20px",padding:"28px 30px",marginBottom:"20px"},children:[e.jsxs("div",{style:{display:"flex",alignItems:"center",gap:"14px",marginBottom:"20px"},children:[e.jsx("div",{style:{width:"44px",height:"44px",borderRadius:"12px",flexShrink:0,background:"rgba(96,165,250,0.12)",border:"1.5px solid rgba(96,165,250,0.2)",display:"flex",alignItems:"center",justifyContent:"center",color:x},children:o}),e.jsx("h2",{style:{margin:0,fontSize:"17px",fontWeight:800,color:d},children:s})]}),e.jsx("div",{style:{color:l,fontSize:"14px",lineHeight:"2.0"},children:c})]})}function t({num:o,text:s,accent:c,textSub:g}){return e.jsxs("div",{style:{display:"flex",alignItems:"flex-start",gap:"12px",marginBottom:"12px"},children:[e.jsx("div",{style:{width:"26px",height:"26px",borderRadius:"50%",flexShrink:0,background:"rgba(96,165,250,0.15)",border:`1.5px solid ${c}`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:"12px",fontWeight:800,color:c,marginTop:"2px"},children:o}),e.jsx("p",{style:{margin:0,color:g,fontSize:"14px",lineHeight:"1.85"},children:s})]})}function X({text:o,accent:s}){return e.jsx("span",{style:{display:"inline-flex",alignItems:"center",padding:"3px 10px",borderRadius:"20px",background:"rgba(96,165,250,0.10)",border:"1px solid rgba(96,165,250,0.22)",fontSize:"12px",fontWeight:600,color:s,marginLeft:"6px",marginBottom:"6px"},children:o})}function $(){const{theme:o}=y(),s=o==="light";u({title:"راهنمای استفاده — گارد نت",description:"راهنمای کامل استفاده از گارد نت؛ آپلود فایل، دانلود، پاسته متن، داشبورد و همه امکانات"});const c=s?"rgba(240,245,255,0.6)":"rgba(255,255,255,0.03)",g=s?"rgba(37,99,235,0.12)":"rgba(96,165,250,0.12)",x=s?"#0f172a":"#e2eeff",n=s?"rgba(15,23,42,0.68)":"rgba(188,210,252,0.75)",i=s?"#2563eb":"#60a5fa",d=s?"rgba(37,99,235,0.10)":"rgba(96,165,250,0.10)",l={accent:i,border:g,cardBg:c,textMain:x,textSub:n};return e.jsx("div",{style:{minHeight:"100vh",paddingTop:"100px",paddingBottom:"80px",direction:"rtl"},children:e.jsxs("div",{style:{maxWidth:"780px",margin:"0 auto",padding:"0 20px"},children:[e.jsxs(h.div,{initial:{opacity:0,y:30},animate:{opacity:1,y:0},transition:{duration:.5,ease:[.16,1,.3,1]},style:{textAlign:"center",marginBottom:"52px"},children:[e.jsxs("div",{style:{display:"inline-flex",alignItems:"center",gap:"8px",padding:"6px 16px",borderRadius:"20px",background:"rgba(96,165,250,0.10)",border:"1px solid rgba(96,165,250,0.22)",fontSize:"12px",fontWeight:600,color:i,marginBottom:"20px"},children:[e.jsx(m,{size:13}),e.jsx("span",{children:"راهنمای کامل"})]}),e.jsxs("h1",{style:{fontSize:"clamp(26px, 5vw, 38px)",fontWeight:900,color:x,margin:"0 0 14px",lineHeight:1.25},children:["از صفر تا صد با"," ",e.jsx("span",{style:{backgroundImage:"linear-gradient(130deg, #60a5fa, #22d3ee)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent"},children:"گارد نت"})]}),e.jsx("p",{style:{fontSize:"15px",color:n,maxWidth:"520px",margin:"0 auto",lineHeight:"1.8"},children:"همه چیزی که باید درباره گارد نت بدانید — از آپلود اولین فایل تا مدیریت پیشرفته، کامل توضیح داده شده."})]}),e.jsxs(h.div,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{delay:.1,duration:.45},style:{background:c,border:`1px solid ${g}`,borderRadius:"20px",padding:"22px 28px",marginBottom:"28px"},children:[e.jsx("p",{style:{margin:"0 0 14px",fontSize:"13px",fontWeight:700,color:i,letterSpacing:"0.06em"},children:"فهرست مطالب"}),e.jsx("div",{style:{display:"flex",flexWrap:"wrap",gap:"8px"},children:["معرفی سایت","آپلود فایل","دانلود فایل","پاسته متن","رمزگذاری","تاریخ انقضا","داشبورد","پشتیبانی","محدودیت‌ها","سوالات متداول"].map((r,p)=>e.jsx("span",{style:{padding:"4px 12px",borderRadius:"8px",fontSize:"12.5px",background:"rgba(96,165,250,0.08)",color:n,border:`1px solid ${d}`},children:r},p))})]}),e.jsxs(a,{index:0,icon:e.jsx(f,{size:20}),title:"گارد نت چیست؟",...l,children:[e.jsxs("p",{style:{margin:"0 0 14px"},children:[e.jsx("strong",{style:{color:x},children:"گارد نت (GuardNET)"})," یک پلتفرم رایگان آپلود و اشتراک‌گذاری فایل ایرانی است که با تمرکز بر سرعت، سادگی و امنیت طراحی شده. نیازی به نصب هیچ نرم‌افزاری نیست — مستقیم از مرورگر استفاده کنید."]}),e.jsx("p",{style:{margin:"0 0 14px"},children:"این سرویس برای همه ساخته شده — از کاربران عادی که می‌خواهند یک فایل را با دوستشان به اشتراک بگذارند، تا توسعه‌دهندگانی که نیاز به میزبانی سریع فایل دارند."}),e.jsx("div",{style:{display:"flex",flexWrap:"wrap",marginTop:"8px"},children:["رایگان ۱۰۰٪","بدون نیاز به ثبت‌نام","پشتیبانی RTL","سرورهای ایران"].map(r=>e.jsx(X,{text:r,accent:i},r))})]}),e.jsxs(a,{index:1,icon:e.jsx(j,{size:20}),title:"آپلود فایل",...l,children:[e.jsx("p",{style:{margin:"0 0 16px"},children:"آپلود فایل در گارد نت بسیار ساده است. دو روش وجود دارد:"}),e.jsx("p",{style:{margin:"0 0 10px",fontWeight:700,color:x},children:"روش ۱ — کشیدن و رها کردن (Drag & Drop)"}),e.jsx(t,{num:1,text:"فایل مورد نظرتان را از کامپیوتر بردارید.",accent:i,textSub:n}),e.jsx(t,{num:2,text:"آن را روی کادر آپلود در صفحه اصلی سایت رها کنید.",accent:i,textSub:n}),e.jsx(t,{num:3,text:"آپلود به‌صورت خودکار شروع می‌شود.",accent:i,textSub:n}),e.jsx("div",{style:{height:"1px",background:d,margin:"16px 0"}}),e.jsx("p",{style:{margin:"0 0 10px",fontWeight:700,color:x},children:"روش ۲ — انتخاب فایل"}),e.jsx(t,{num:1,text:"روی کادر آپلود در صفحه اصلی کلیک کنید.",accent:i,textSub:n}),e.jsx(t,{num:2,text:"از پنجره باز شده، فایل خود را انتخاب کنید.",accent:i,textSub:n}),e.jsx(t,{num:3,text:"پیشرفت آپلود را در نوار نمایش داده شده دنبال کنید.",accent:i,textSub:n}),e.jsx(t,{num:4,text:"پس از اتمام، لینک دانلود به‌صورت خودکار نمایش داده می‌شود.",accent:i,textSub:n}),e.jsx("div",{style:{marginTop:"16px",padding:"14px 16px",borderRadius:"12px",background:"rgba(96,165,250,0.07)",border:"1px solid rgba(96,165,250,0.15)"},children:e.jsxs("p",{style:{margin:0,fontSize:"13px"},children:[e.jsx("strong",{style:{color:i},children:"حداکثر حجم فایل:"})," ","برای کاربران مهمان ۴۵۰ مگابایت — برای کاربران ثبت‌نام کرده ۸۵۰ مگابایت."]})})]}),e.jsxs(a,{index:2,icon:e.jsx(B,{size:20}),title:"دانلود فایل",...l,children:[e.jsx("p",{style:{margin:"0 0 16px"},children:"برای دانلود فایل از گارد نت کافی است لینک مشترک‌سازی را داشته باشید. لینک‌های گارد نت به شکل زیر هستند:"}),e.jsx("div",{style:{padding:"12px 16px",borderRadius:"10px",background:"rgba(0,0,0,0.2)",border:`1px solid ${d}`,fontFamily:"monospace",fontSize:"13px",color:i,marginBottom:"16px",direction:"ltr",textAlign:"left"},children:"https://guardnet.ir/f/XXXXXXXX"}),e.jsx(t,{num:1,text:"لینک را در مرورگر باز کنید.",accent:i,textSub:n}),e.jsx(t,{num:2,text:"اگر فایل رمزدار است، رمز عبور را وارد کنید.",accent:i,textSub:n}),e.jsx(t,{num:3,text:"دکمه دانلود را بزنید — فایل مستقیماً دانلود می‌شود.",accent:i,textSub:n}),e.jsx(t,{num:4,text:"برای فایل‌های قابل پیش‌نمایش (تصویر، ویدیو، PDF) می‌توانید قبل از دانلود آن‌ها را در سایت ببینید.",accent:i,textSub:n})]}),e.jsxs(a,{index:3,icon:e.jsx(v,{size:20}),title:"پاسته متن",...l,children:[e.jsxs("p",{style:{margin:"0 0 14px"},children:["گارد نت علاوه بر فایل، امکان اشتراک‌گذاری ",e.jsx("strong",{style:{color:x},children:"متن کوتاه"})," را هم دارد. مناسب برای کدها، یادداشت‌ها، پیام‌های متنی و هر چیزی که فقط متن است."]}),e.jsx(t,{num:1,text:'در صفحه اصلی، روی تب "متن" کلیک کنید.',accent:i,textSub:n}),e.jsx(t,{num:2,text:"متن خود را تایپ یا paste کنید. حداکثر ۲۰۰۰ کاراکتر.",accent:i,textSub:n}),e.jsx(t,{num:3,text:"دکمه ارسال را بزنید تا لینک اختصاصی پاسته شما ساخته شود.",accent:i,textSub:n}),e.jsx(t,{num:4,text:"لینک را با دیگران به اشتراک بگذارید.",accent:i,textSub:n}),e.jsx("div",{style:{marginTop:"16px",padding:"14px 16px",borderRadius:"12px",background:"rgba(96,165,250,0.07)",border:"1px solid rgba(96,165,250,0.15)"},children:e.jsxs("p",{style:{margin:0,fontSize:"13px"},children:["لینک پاسته‌ها به شکل ",e.jsx("span",{style:{fontFamily:"monospace",color:i},children:"guardnet.ir/p/XXXX"})," هستند."]})})]}),e.jsxs(a,{index:4,icon:e.jsx(z,{size:20}),title:"رمزگذاری فایل",...l,children:[e.jsxs("p",{style:{margin:"0 0 14px"},children:["اگر نمی‌خواهید هر کسی بتواند فایل شما را دانلود کند، می‌توانید یک ",e.jsx("strong",{style:{color:x},children:"رمز عبور"})," برای آن تعیین کنید. فقط کسانی که رمز را می‌دانند می‌توانند فایل را دانلود کنند."]}),e.jsx(t,{num:1,text:"هنگام آپلود، گزینه «رمزگذاری» را فعال کنید.",accent:i,textSub:n}),e.jsx(t,{num:2,text:"رمز عبور دلخواه خود را وارد کنید.",accent:i,textSub:n}),e.jsx(t,{num:3,text:"فایل را آپلود کنید — لینک معمولی است اما برای دانلود رمز نیاز است.",accent:i,textSub:n}),e.jsx(t,{num:4,text:"رمز را جداگانه به طرف مقابل بدهید.",accent:i,textSub:n}),e.jsx("div",{style:{marginTop:"16px",padding:"14px 16px",borderRadius:"12px",background:"rgba(239,68,68,0.06)",border:"1px solid rgba(239,68,68,0.15)"},children:e.jsxs("p",{style:{margin:0,fontSize:"13px",color:"rgba(252,165,165,0.9)"},children:[e.jsx("strong",{children:"توجه:"})," رمز عبور را جایی ذخیره کنید. اگر رمز را فراموش کنید، امکان بازیابی وجود ندارد."]})})]}),e.jsxs(a,{index:5,icon:e.jsx(S,{size:20}),title:"تاریخ انقضا",...l,children:[e.jsx("p",{style:{margin:"0 0 14px"},children:"می‌توانید تعیین کنید که فایل شما بعد از چه مدتی به‌صورت خودکار حذف شود. این قابلیت برای فایل‌های موقت یا حساس بسیار مفید است."}),e.jsx("div",{style:{display:"flex",flexWrap:"wrap",gap:"10px",marginBottom:"16px"},children:[{label:"۷ روز",desc:"فایل بعد از یک هفته پاک می‌شود"},{label:"۳۰ روز",desc:"فایل بعد از یک ماه پاک می‌شود"},{label:"دائمی",desc:"فایل هرگز به‌صورت خودکار پاک نمی‌شود"}].map(r=>e.jsxs("div",{style:{flex:"1 1 160px",padding:"14px 16px",borderRadius:"12px",background:"rgba(96,165,250,0.07)",border:`1px solid ${d}`},children:[e.jsx("p",{style:{margin:"0 0 4px",fontWeight:700,color:i,fontSize:"14px"},children:r.label}),e.jsx("p",{style:{margin:0,fontSize:"12px",color:n},children:r.desc})]},r.label))}),e.jsx("p",{style:{margin:0,fontSize:"13px"},children:"اگر هیچ گزینه‌ای انتخاب نکنید، تنظیمات پیش‌فرض سیستم اعمال می‌شود."})]}),e.jsxs(a,{index:6,icon:e.jsx(k,{size:20}),title:"داشبورد (مخصوص اعضا)",...l,children:[e.jsx("p",{style:{margin:"0 0 14px"},children:"اگر حساب کاربری داشته باشید، به داشبورد اختصاصی دسترسی پیدا می‌کنید. در داشبورد می‌توانید:"}),["همه فایل‌های آپلود شده خود را ببینید و مدیریت کنید","فایل‌هایی که دیگر نیاز ندارید را حذف کنید","آمار دانلود هر فایل را مشاهده کنید","لینک فایل‌ها را کپی کنید","رمز عبور فایل‌ها را مدیریت کنید","تاریخ انقضا را ببینید"].map((r,p)=>e.jsxs("div",{style:{display:"flex",alignItems:"flex-start",gap:"10px",marginBottom:"10px"},children:[e.jsx(I,{size:14,style:{color:i,flexShrink:0,marginTop:"4px"}}),e.jsx("p",{style:{margin:0,fontSize:"14px"},children:r})]},p)),e.jsx("div",{style:{marginTop:"12px",padding:"14px 16px",borderRadius:"12px",background:"rgba(96,165,250,0.07)",border:"1px solid rgba(96,165,250,0.15)"},children:e.jsxs("p",{style:{margin:0,fontSize:"13px"},children:["برای ساختن حساب کاربری ",e.jsx("strong",{style:{color:i},children:"رایگان"}),"، روی دکمه «ثبت‌نام» در بالای صفحه کلیک کنید. فقط نام کاربری، ایمیل و رمز عبور نیاز است."]})})]}),e.jsxs(a,{index:7,icon:e.jsx(W,{size:20}),title:"سیستم پشتیبانی (تیکت)",...l,children:[e.jsx("p",{style:{margin:"0 0 14px"},children:"اگر مشکلی داشتید یا سوالی دارید، می‌توانید از طریق سیستم تیکت با تیم گارد نت در ارتباط باشید."}),e.jsx(t,{num:1,text:"وارد حساب کاربری خود شوید و از منو «پشتیبانی» را انتخاب کنید.",accent:i,textSub:n}),e.jsx(t,{num:2,text:"روی «ثبت تیکت جدید» کلیک کنید.",accent:i,textSub:n}),e.jsx(t,{num:3,text:"موضوع و توضیحات مشکل خود را بنویسید.",accent:i,textSub:n}),e.jsx(t,{num:4,text:"تیم ما در اسرع وقت پاسخ می‌دهد.",accent:i,textSub:n}),e.jsxs("p",{style:{margin:"12px 0 0",fontSize:"13px"},children:["همچنین می‌توانید از کانال تلگرام ما"," ",e.jsx("a",{href:"https://t.me/GUARDDNET",target:"_blank",rel:"noopener noreferrer",style:{color:i,textDecoration:"none",fontWeight:600},children:"@GUARDDNET"})," ","پیام دهید."]})]}),e.jsx(a,{index:8,icon:e.jsx(R,{size:20}),title:"محدودیت‌ها و اطلاعات فنی",...l,children:e.jsx("div",{style:{display:"flex",flexWrap:"wrap",gap:"12px"},children:[{label:"حداکثر حجم (مهمان)",value:"۴۵۰ مگابایت"},{label:"حداکثر حجم (عضو)",value:"۸۵۰ مگابایت"},{label:"حداکثر متن پاسته",value:"۲۰۰۰ کاراکتر"},{label:"فرمت‌های پشتیبانی",value:"همه فرمت‌ها"},{label:"پیش‌نمایش تصویر",value:"JPG, PNG, GIF, WebP"},{label:"پیش‌نمایش ویدیو",value:"MP4, WebM"},{label:"زمان نگه‌داری پیش‌فرض",value:"طبق تنظیمات سیستم"},{label:"تعداد آپلود",value:"بدون محدودیت"}].map(r=>e.jsxs("div",{style:{flex:"1 1 200px",padding:"14px 16px",borderRadius:"12px",background:"rgba(96,165,250,0.06)",border:`1px solid ${d}`},children:[e.jsx("p",{style:{margin:"0 0 4px",fontSize:"11.5px",color:n},children:r.label}),e.jsx("p",{style:{margin:0,fontSize:"14px",fontWeight:700,color:x},children:r.value})]},r.label))})}),e.jsx(a,{index:9,icon:e.jsx(m,{size:20}),title:"سوالات متداول",...l,children:[{q:"آیا ثبت‌نام اجباری است؟",a:"خیر. می‌توانید بدون ثبت‌نام فایل آپلود کنید. اما با ثبت‌نام به داشبورد و امکانات بیشتری دسترسی دارید."},{q:"آیا فایل‌هایم خصوصی هستند؟",a:"لینک فایل‌ها تصادفی و غیرقابل حدس است. فقط کسی که لینک را دارد می‌تواند فایل را ببیند. برای امنیت بیشتر از رمزگذاری استفاده کنید."},{q:"چطور فایلم را حذف کنم؟",a:"اعضا می‌توانند از طریق داشبورد فایل‌هایشان را حذف کنند. کاربران مهمان می‌توانند از طریق تیکت یا تلگرام درخواست حذف بدهند."},{q:"آیا گارد نت رایگان است؟",a:"بله، گارد نت کاملاً رایگان است و قرار نیست پولی از کاربران گرفته شود."},{q:"فایل‌هایم چقدر ذخیره می‌مانند؟",a:"بستگی به تنظیمات انقضا دارد. اگر دائمی انتخاب کنید، تا زمانی که تیم گارد نت تصمیمی نگیرد ذخیره می‌مانند."}].map((r,p)=>e.jsxs("div",{style:{marginBottom:p<4?"16px":0,paddingBottom:p<4?"16px":0,borderBottom:p<4?`1px solid ${d}`:"none"},children:[e.jsx("p",{style:{margin:"0 0 6px",fontWeight:700,color:x,fontSize:"14px"},children:r.q}),e.jsx("p",{style:{margin:0,fontSize:"13.5px",color:n,lineHeight:"1.8"},children:r.a})]},p))}),e.jsxs(h.div,{initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.45},style:{textAlign:"center",marginTop:"12px",padding:"36px 24px",borderRadius:"20px",background:"linear-gradient(135deg, rgba(37,99,235,0.10) 0%, rgba(14,165,233,0.08) 100%)",border:"1px solid rgba(96,165,250,0.18)"},children:[e.jsx(w,{size:28,style:{color:i,marginBottom:"12px"}}),e.jsx("h3",{style:{margin:"0 0 10px",fontSize:"18px",fontWeight:800,color:x},children:"آماده شروع هستید؟"}),e.jsx("p",{style:{margin:"0 0 20px",fontSize:"14px",color:n},children:"همین حالا بدون ثبت‌نام اولین فایل خود را آپلود کنید."}),e.jsxs("a",{href:"/",style:{display:"inline-flex",alignItems:"center",gap:"8px",padding:"12px 28px",borderRadius:"12px",background:"linear-gradient(130deg, #3b82f6, #0ea5e9)",color:"white",fontWeight:700,fontSize:"14px",textDecoration:"none",letterSpacing:"0.02em",boxShadow:"0 4px 20px rgba(59,130,246,0.35)"},children:[e.jsx(j,{size:16}),"آپلود فایل"]})]})]})})}export{$ as default};
+import {
+  c as createLucideIcon,
+  h as useTheme,
+  e as seo,
+  j as jsxRuntime,
+  m as motion,
+  N as InfoIcon,
+  O as ShieldIcon,
+  U as UploadIcon,
+  F as TextIcon,
+  L as LockIcon,
+  x as ClockIcon,
+  P as DashboardIcon,
+  M as SupportIcon,
+  T as SettingsIcon,
+  Z as CheckIcon
+} from "./0Dmh-Cmn.js";
+
+import { D as DownloadIcon } from "./DD9mmw5L.js";
+
+/* -------------------------------------------------------------------------- */
+/*                                    ICONS                                   */
+/* -------------------------------------------------------------------------- */
+
+const chevronLeftPath = [
+  [
+    "path",
+    {
+      d: "m15 18-6-6 6-6",
+      key: "1wnfg3"
+    }
+  ]
+];
+
+const ChevronLeft = createLucideIcon(
+  "chevron-left",
+  chevronLeftPath
+);
+
+/* -------------------------------------------------------------------------- */
+/*                                  ANIMATION                                 */
+/* -------------------------------------------------------------------------- */
+
+const fadeUpVariant = {
+  hidden: {
+    opacity: 0,
+    y: 22
+  },
+
+  show: (index) => ({
+    opacity: 1,
+    y: 0,
+
+    transition: {
+      delay: index * 0.06,
+      duration: 0.45,
+      ease: [0.16, 1, 0.3, 1]
+    }
+  })
+};
+
+/* -------------------------------------------------------------------------- */
+/*                                SECTION CARD                                */
+/* -------------------------------------------------------------------------- */
+
+function SectionCard({
+  icon,
+  title,
+  children,
+  index,
+
+  accent,
+  border,
+  cardBg,
+  textMain,
+  textSub
+}) {
+  return jsxRuntime.jsxs(motion.div, {
+    custom: index,
+    initial: "hidden",
+    whileInView: "show",
+    viewport: {
+      once: true,
+      margin: "-60px"
+    },
+    variants: fadeUpVariant,
+
+    style: {
+      background: cardBg,
+      border: `1px solid ${border}`,
+      borderRadius: "20px",
+      padding: "28px 30px",
+      marginBottom: "20px"
+    },
+
+    children: [
+      jsxRuntime.jsxs("div", {
+        style: {
+          display: "flex",
+          alignItems: "center",
+          gap: "14px",
+          marginBottom: "20px"
+        },
+
+        children: [
+          jsxRuntime.jsx("div", {
+            style: {
+              width: "44px",
+              height: "44px",
+              borderRadius: "12px",
+              flexShrink: 0,
+
+              background: "rgba(96,165,250,0.12)",
+              border: "1.5px solid rgba(96,165,250,0.2)",
+
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+
+              color: accent
+            },
+
+            children: icon
+          }),
+
+          jsxRuntime.jsx("h2", {
+            style: {
+              margin: 0,
+              fontSize: "17px",
+              fontWeight: 800,
+              color: textMain
+            },
+
+            children: title
+          })
+        ]
+      }),
+
+      jsxRuntime.jsx("div", {
+        style: {
+          color: textSub,
+          fontSize: "14px",
+          lineHeight: "2.0"
+        },
+
+        children
+      })
+    ]
+  });
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  STEP ITEM                                 */
+/* -------------------------------------------------------------------------- */
+
+function StepItem({
+  num,
+  text,
+  accent,
+  textSub
+}) {
+  return jsxRuntime.jsxs("div", {
+    style: {
+      display: "flex",
+      alignItems: "flex-start",
+      gap: "12px",
+      marginBottom: "12px"
+    },
+
+    children: [
+      jsxRuntime.jsx("div", {
+        style: {
+          width: "26px",
+          height: "26px",
+          borderRadius: "50%",
+          flexShrink: 0,
+
+          background: "rgba(96,165,250,0.15)",
+          border: `1.5px solid ${accent}`,
+
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+
+          fontSize: "12px",
+          fontWeight: 800,
+          color: accent,
+
+          marginTop: "2px"
+        },
+
+        children: num
+      }),
+
+      jsxRuntime.jsx("p", {
+        style: {
+          margin: 0,
+          color: textSub,
+          fontSize: "14px",
+          lineHeight: "1.85"
+        },
+
+        children: text
+      })
+    ]
+  });
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   TAG CHIP                                 */
+/* -------------------------------------------------------------------------- */
+
+function TagChip({
+  text,
+  accent
+}) {
+  return jsxRuntime.jsx("span", {
+    style: {
+      display: "inline-flex",
+      alignItems: "center",
+
+      padding: "3px 10px",
+      borderRadius: "20px",
+
+      background: "rgba(96,165,250,0.10)",
+      border: "1px solid rgba(96,165,250,0.22)",
+
+      fontSize: "12px",
+      fontWeight: 600,
+      color: accent,
+
+      marginLeft: "6px",
+      marginBottom: "6px"
+    },
+
+    children: text
+  });
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    PAGE                                    */
+/* -------------------------------------------------------------------------- */
+
+function GuidePage() {
+  const { theme } = useTheme();
+
+  const isLight = theme === "light";
+
+  seo({
+    title: "راهنمای استفاده — گارد نت",
+    description:
+      "راهنمای کامل استفاده از گارد نت؛ آپلود فایل، دانلود، پاسته متن، داشبورد و همه امکانات"
+  });
+
+  /* --------------------------------- COLORS -------------------------------- */
+
+  const cardBg = isLight
+    ? "rgba(240,245,255,0.6)"
+    : "rgba(255,255,255,0.03)";
+
+  const border = isLight
+    ? "rgba(37,99,235,0.12)"
+    : "rgba(96,165,250,0.12)";
+
+  const textMain = isLight
+    ? "#0f172a"
+    : "#e2eeff";
+
+  const textSub = isLight
+    ? "rgba(15,23,42,0.68)"
+    : "rgba(188,210,252,0.75)";
+
+  const accent = isLight
+    ? "#2563eb"
+    : "#60a5fa";
+
+  const softBorder = isLight
+    ? "rgba(37,99,235,0.10)"
+    : "rgba(96,165,250,0.10)";
+
+  const sharedProps = {
+    accent,
+    border,
+    cardBg,
+    textMain,
+    textSub
+  };
+
+  /* ------------------------------------------------------------------------ */
+
+  return jsxRuntime.jsx("div", {
+    style: {
+      minHeight: "100vh",
+      paddingTop: "100px",
+      paddingBottom: "80px",
+      direction: "rtl"
+    },
+
+    children: jsxRuntime.jsxs("div", {
+      style: {
+        maxWidth: "780px",
+        margin: "0 auto",
+        padding: "0 20px"
+      },
+
+      children: [
+
+        /* ------------------------------ HERO AREA ----------------------------- */
+
+        jsxRuntime.jsxs(motion.div, {
+          initial: {
+            opacity: 0,
+            y: 30
+          },
+
+          animate: {
+            opacity: 1,
+            y: 0
+          },
+
+          transition: {
+            duration: 0.5,
+            ease: [0.16, 1, 0.3, 1]
+          },
+
+          style: {
+            textAlign: "center",
+            marginBottom: "52px"
+          },
+
+          children: [
+            jsxRuntime.jsxs("div", {
+              style: {
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "8px",
+
+                padding: "6px 16px",
+                borderRadius: "20px",
+
+                background: "rgba(96,165,250,0.10)",
+                border: "1px solid rgba(96,165,250,0.22)",
+
+                fontSize: "12px",
+                fontWeight: 600,
+                color: accent,
+
+                marginBottom: "20px"
+              },
+
+              children: [
+                jsxRuntime.jsx(InfoIcon, { size: 13 }),
+                jsxRuntime.jsx("span", {
+                  children: "راهنمای کامل"
+                })
+              ]
+            }),
+
+            jsxRuntime.jsxs("h1", {
+              style: {
+                fontSize: "clamp(26px, 5vw, 38px)",
+                fontWeight: 900,
+                color: textMain,
+
+                margin: "0 0 14px",
+                lineHeight: 1.25
+              },
+
+              children: [
+                "از صفر تا صد با ",
+
+                jsxRuntime.jsx("span", {
+                  style: {
+                    backgroundImage:
+                      "linear-gradient(130deg, #60a5fa, #22d3ee)",
+
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent"
+                  },
+
+                  children: "گارد نت"
+                })
+              ]
+            }),
+
+            jsxRuntime.jsx("p", {
+              style: {
+                fontSize: "15px",
+                color: textSub,
+
+                maxWidth: "520px",
+                margin: "0 auto",
+
+                lineHeight: "1.8"
+              },
+
+              children:
+                "همه چیزی که باید درباره گارد نت بدانید — از آپلود اولین فایل تا مدیریت پیشرفته، کامل توضیح داده شده."
+            })
+          ]
+        })
+
+        // ادامه کد...
+      ]
+    })
+  });
+}
+
+export { GuidePage as default };
