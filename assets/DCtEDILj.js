@@ -1,1 +1,483 @@
-import{G as C,J as $,r as d,p as q,j as e,B as m,M as w,K as E,m as A,X as D,I,o as k,t as p,g as L,l as P}from"./0Dmh-Cmn.js";import{C as S,S as z}from"./BpgMS7XR.js";import{P as K,T as Q}from"./8Rs16s_B.js";const j="/".replace(/\/$/,"")+"/api";function B(){return localStorage.getItem("filehost_token")||sessionStorage.getItem("filehost_token")||""}function b(){return{"Content-Type":"application/json",Authorization:`Bearer ${B()}`}}async function O(s=1){const t=await fetch(`${j}/tickets?page=${s}&limit=20`,{headers:b()});if(!t.ok)throw new Error("خطا در دریافت تیکت‌ها");return t.json()}async function R(s){const t=await fetch(`${j}/tickets/${s}`,{headers:b()});if(!t.ok)throw new Error("تیکت یافت نشد");return t.json()}async function F(s,t){const r=await fetch(`${j}/tickets`,{method:"POST",headers:b(),body:JSON.stringify({subject:s,message:t})}),n=await r.json();if(!r.ok)throw new Error(n.error||"خطا در ایجاد تیکت");return n}async function J(s,t){const r=await fetch(`${j}/tickets/${s}/replies`,{method:"POST",headers:b(),body:JSON.stringify({message:t})}),n=await r.json();if(!r.ok)throw new Error(n.error||"خطا در ارسال پاسخ");return n}async function M(s){const t=await fetch(`${j}/tickets/${s}`,{method:"DELETE",headers:b()}),r=await t.json();if(!t.ok)throw new Error(r.error||"خطا در حذف تیکت");return r}function W(){const{isAuthenticated:s,isLoading:t,user:r}=C(),[,n]=$(),[l,a]=d.useState(null),[h,u]=d.useState(!1),[f,c]=d.useState(""),[x,o]=d.useState(""),[y,v]=d.useState(""),[i,N]=d.useState(1),g=q();return t?null:s?e.jsxs("div",{className:"max-w-4xl mx-auto px-3 sm:px-4 py-6 sm:py-10 space-y-4 sm:space-y-6",children:[e.jsxs("div",{className:"flex items-center justify-between gap-3",children:[e.jsxs("div",{className:"flex-1 min-w-0",children:[l?e.jsxs(m,{variant:"ghost",size:"sm",onClick:()=>{a(null),g.invalidateQueries({queryKey:["tickets"]})},className:"gap-1.5 mb-1 -mr-2",children:[e.jsx(S,{className:"w-4 h-4 rotate-180"}),"بازگشت"]}):null,e.jsxs("h1",{className:"text-xl sm:text-3xl font-bold font-display flex items-center gap-2",children:[e.jsx(w,{className:"w-6 h-6 sm:w-8 sm:h-8 text-primary shrink-0"}),e.jsx("span",{className:"truncate",children:"تیکت‌های پشتیبانی"})]}),e.jsx("p",{className:"text-muted-foreground mt-0.5 text-xs sm:text-sm",children:"با تیم پشتیبانی GuardNET در ارتباط باشید"})]}),!l&&e.jsxs(m,{onClick:()=>u(!h),size:"sm",className:"gap-1.5 shrink-0",children:[e.jsx(K,{className:"w-4 h-4"}),e.jsx("span",{className:"hidden xs:inline",children:"تیکت جدید"}),e.jsx("span",{className:"xs:hidden",children:"جدید"})]})]}),e.jsx(E,{children:h&&!l&&e.jsx(_,{subject:f,setSubject:c,message:x,setMessage:o,onCancel:()=>{u(!1),c(""),o("")},onSuccess:T=>{u(!1),c(""),o(""),g.invalidateQueries({queryKey:["tickets"]}),a(T)}})}),l?e.jsx(H,{ticketId:l,reply:y,setReply:v,isAdmin:r?.role==="admin",onBack:()=>{a(null),g.invalidateQueries({queryKey:["tickets"]})},onReply:()=>g.invalidateQueries({queryKey:["ticket",l]}),onDelete:()=>{a(null),g.invalidateQueries({queryKey:["tickets"]})}}):e.jsx(G,{page:i,setPage:N,onSelect:a})]}):(n("/login"),null)}function _({subject:s,setSubject:t,message:r,setMessage:n,onCancel:l,onSuccess:a}){const[h,u]=d.useState(!1),f=async c=>{if(c.preventDefault(),!(!s.trim()||!r.trim())){u(!0);try{const x=await F(s,r);p({title:"تیکت ایجاد شد",description:"پشتیبانی به زودی پاسخ خواهد داد."}),a(x.id)}catch(x){p({title:"خطا",description:x.message,variant:"destructive"})}finally{u(!1)}}};return e.jsxs(A.div,{initial:{opacity:0,y:-10},animate:{opacity:1,y:0},exit:{opacity:0,y:-10},className:"glass-card rounded-2xl p-4 sm:p-6 border border-border/50 space-y-4",children:[e.jsxs("div",{className:"flex items-center justify-between",children:[e.jsx("h2",{className:"font-semibold text-base sm:text-lg",children:"ایجاد تیکت جدید"}),e.jsx(m,{variant:"ghost",size:"icon",className:"w-8 h-8",onClick:l,children:e.jsx(D,{className:"w-4 h-4"})})]}),e.jsxs("form",{onSubmit:f,className:"space-y-3 sm:space-y-4",children:[e.jsxs("div",{children:[e.jsx("label",{className:"text-sm font-medium mb-1 block",children:"موضوع"}),e.jsxs("div",{className:"relative",children:[e.jsx(I,{value:s,onChange:c=>t(c.target.value.slice(0,15)),maxLength:15,placeholder:"موضوع تیکت را وارد کنید",required:!0,className:"h-10 text-sm pl-12"}),e.jsxs("span",{className:"absolute left-3 top-1/2 -translate-y-1/2 text-[10px] font-mono tabular-nums pointer-events-none",style:{color:s.length>=15?"#f87171":"rgba(148,163,184,0.45)"},children:[s.length,"/15"]})]})]}),e.jsxs("div",{children:[e.jsx("label",{className:"text-sm font-medium mb-1 block",children:"پیام"}),e.jsxs("div",{className:"relative",children:[e.jsx("textarea",{value:r,onChange:c=>n(c.target.value.slice(0,3e3)),maxLength:3e3,placeholder:"پیام خود را بنویسید...",required:!0,className:"flex min-h-[100px] sm:min-h-[120px] w-full rounded-xl border border-border bg-background px-3 py-2 pb-6 text-sm text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 resize-none"}),e.jsxs("span",{className:"absolute bottom-2 left-3 text-[10px] font-mono tabular-nums pointer-events-none",style:{color:r.length>=2900?"#f87171":"rgba(148,163,184,0.45)"},children:[r.length,"/3000"]})]})]}),e.jsxs("div",{className:"flex flex-col-reverse sm:flex-row justify-end gap-2 sm:gap-3",children:[e.jsx(m,{type:"button",variant:"outline",onClick:l,className:"w-full sm:w-auto",children:"انصراف"}),e.jsx(m,{type:"submit",disabled:h||!s.trim()||!r.trim(),className:"w-full sm:w-auto",children:h?"در حال ارسال...":"ارسال تیکت"})]})]})]})}function G({page:s,setPage:t,onSelect:r}){const{data:n,isLoading:l}=k({queryKey:["tickets",s],queryFn:()=>O(s),staleTime:0,refetchInterval:3e3,placeholderData:a=>a});return e.jsxs("div",{className:"glass-card rounded-2xl overflow-hidden border border-border/50",children:[l?e.jsx("div",{className:"p-8 text-center text-muted-foreground text-sm",children:"در حال بارگذاری..."}):n?.tickets.length===0?e.jsxs("div",{className:"p-8 sm:p-10 text-center text-muted-foreground",children:[e.jsx(w,{className:"w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 opacity-30"}),e.jsx("p",{className:"text-sm",children:"هیچ تیکتی ندارید. تیکت جدید ایجاد کنید."})]}):e.jsx("div",{className:"divide-y divide-border",children:n?.tickets.map(a=>e.jsxs("button",{onClick:()=>r(a.id),className:"w-full px-4 sm:px-6 py-4 flex items-center justify-between hover:bg-foreground/[0.04] transition-colors text-right gap-3",children:[e.jsxs("div",{className:"flex items-center gap-3 min-w-0 flex-1",children:[e.jsx("div",{className:`w-2 h-2 rounded-full shrink-0 ${a.status==="open"?"bg-green-500":"bg-muted-foreground"}`}),e.jsxs("div",{className:"min-w-0 text-right",children:[e.jsx("p",{className:"font-medium text-foreground text-sm sm:text-base truncate",children:a.subject}),e.jsxs("p",{className:"text-xs text-muted-foreground mt-0.5",children:[a.replyCount," پیام · ",a.status==="open"?"باز":"بسته"," ","· ",P(a.updatedAt)]})]})]}),e.jsx(S,{className:"w-4 h-4 text-muted-foreground shrink-0"})]},a.id))}),n&&n.total>n.limit&&e.jsxs("div",{className:"p-3 sm:p-4 border-t border-border flex justify-between items-center",children:[e.jsxs("p",{className:"text-xs sm:text-sm text-muted-foreground",children:["نمایش ",n.tickets.length," از ",n.total]}),e.jsxs("div",{className:"flex gap-2",children:[e.jsx(m,{variant:"outline",size:"sm",disabled:s===1,onClick:()=>t(a=>a-1),children:"قبلی"}),e.jsx(m,{variant:"outline",size:"sm",disabled:s*n.limit>=n.total,onClick:()=>t(a=>a+1),children:"بعدی"})]})]})]})}function H({ticketId:s,reply:t,setReply:r,onBack:n,onReply:l,onDelete:a,isAdmin:h}){const[u,f]=d.useState(!1),[c,x]=d.useState(!1),{data:o,isLoading:y}=k({queryKey:["ticket",s],queryFn:()=>R(s),refetchInterval:3e3,staleTime:0}),v=async i=>{if(i.preventDefault(),!!t.trim()){f(!0);try{await J(s,t),r(""),l(),p({title:"پاسخ ارسال شد"})}catch(N){p({title:"خطا",description:N.message,variant:"destructive"})}finally{f(!1)}}};return y?e.jsx("div",{className:"text-center py-10 text-muted-foreground text-sm",children:"در حال بارگذاری..."}):o?e.jsxs("div",{className:"space-y-4",children:[e.jsxs("div",{className:"glass-card rounded-2xl p-3 sm:p-4 border border-border/50 flex items-center gap-3",children:[e.jsx("div",{className:`w-2.5 h-2.5 rounded-full shrink-0 ${o.status==="open"?"bg-green-500":"bg-muted-foreground"}`}),e.jsxs("div",{className:"flex-1 min-w-0",children:[e.jsx("h2",{className:"font-semibold text-sm sm:text-base truncate",children:o.subject}),e.jsx("span",{className:`text-xs px-2 py-0.5 rounded ${o.status==="open"?"bg-green-500/20 text-green-400":"bg-secondary text-muted-foreground"}`,children:o.status==="open"?"باز":"بسته"})]}),h&&e.jsx(m,{variant:"ghost",size:"sm",disabled:c,onClick:async()=>{if(confirm("آیا از حذف این تیکت مطمئن هستید؟")){x(!0);try{await M(s),p({title:"تیکت حذف شد"}),a()}catch(i){p({title:"خطا",description:i.message,variant:"destructive"})}finally{x(!1)}}},className:"shrink-0 text-red-500 hover:text-red-400 hover:bg-red-500/10",children:e.jsx(Q,{className:"w-4 h-4"})})]}),e.jsx("div",{className:"glass-card rounded-2xl border border-border/50 divide-y divide-border overflow-hidden",children:o.replies.map(i=>e.jsxs("div",{className:`px-4 sm:px-6 py-3 sm:py-4 ${i.isAdmin?"bg-primary/5":""}`,children:[e.jsxs("div",{className:"flex items-center gap-2 mb-2 flex-wrap",children:[e.jsx("span",{className:"font-medium text-sm",children:i.username}),i.isAdmin&&e.jsx("span",{className:"text-xs bg-primary/20 text-primary px-2 py-0.5 rounded",children:"پشتیبانی"}),e.jsx("span",{className:"text-xs text-muted-foreground sm:mr-auto",children:L(i.createdAt)})]}),e.jsx("p",{className:"text-sm text-foreground/90 whitespace-pre-wrap",children:i.message})]},i.id))}),o.status==="open"&&e.jsxs("form",{onSubmit:v,className:"space-y-2 sm:space-y-0 sm:flex sm:gap-3",children:[e.jsxs("div",{className:"relative w-full sm:flex-1",children:[e.jsx("textarea",{value:t,onChange:i=>r(i.target.value.slice(0,3e3)),maxLength:3e3,placeholder:"پاسخ خود را بنویسید...",className:"w-full min-h-[80px] rounded-xl border border-border bg-background px-3 py-2 pb-6 text-sm text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 resize-none"}),e.jsxs("span",{className:"absolute bottom-2 left-3 text-[10px] font-mono tabular-nums pointer-events-none",style:{color:t.length>=2900?"#f87171":"rgba(148,163,184,0.45)"},children:[t.length,"/3000"]})]}),e.jsxs(m,{type:"submit",disabled:u||!t.trim(),className:"w-full sm:w-auto sm:self-end gap-2",children:[e.jsx(z,{className:"w-4 h-4"}),"ارسال"]})]}),o.status==="closed"&&e.jsx("p",{className:"text-center text-sm text-muted-foreground py-4",children:"این تیکت توسط پشتیبانی بسته شده است."})]}):null}export{W as default};
+/* -------------------------------------------------------------------------- */
+/*                                   IMPORTS                                  */
+/* -------------------------------------------------------------------------- */
+
+import {
+  G as useAuth,
+  J as useNavigate,
+  r as React,
+  p as useQueryClient,
+  j as jsx,
+
+  B as Button,
+  M as TicketIcon,
+  K as AnimatePresence,
+  m as motion,
+
+  X as CloseIcon,
+  I as Input,
+
+  o as useQuery,
+  t as toast,
+
+  g as formatDate,
+  l as formatRelative
+} from "./0Dmh-Cmn.js";
+
+import {
+  C as ChevronLeft,
+  S as SendIcon
+} from "./BpgMS7XR.js";
+
+import {
+  P as PlusIcon,
+  T as TrashIcon
+} from "./8Rs16s_B.js";
+
+/* -------------------------------------------------------------------------- */
+/*                                   CONFIG                                   */
+/* -------------------------------------------------------------------------- */
+
+const API_BASE =
+  "/".replace(/\/$/, "") + "/api";
+
+/* -------------------------------------------------------------------------- */
+/*                              AUTH / HEADERS                                */
+/* -------------------------------------------------------------------------- */
+
+function getToken() {
+  return (
+    localStorage.getItem("filehost_token") ||
+    sessionStorage.getItem("filehost_token") ||
+    ""
+  );
+}
+
+function getHeaders() {
+  return {
+    "Content-Type": "application/json",
+
+    Authorization:
+      `Bearer ${getToken()}`
+  };
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    API                                     */
+/* -------------------------------------------------------------------------- */
+
+async function fetchTickets(page = 1) {
+  const response = await fetch(
+    `${API_BASE}/tickets?page=${page}&limit=20`,
+    {
+      headers: getHeaders()
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error(
+      "خطا در دریافت تیکت‌ها"
+    );
+  }
+
+  return response.json();
+}
+
+async function fetchTicket(ticketId) {
+  const response = await fetch(
+    `${API_BASE}/tickets/${ticketId}`,
+    {
+      headers: getHeaders()
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error(
+      "تیکت یافت نشد"
+    );
+  }
+
+  return response.json();
+}
+
+async function createTicket(
+  subject,
+  message
+) {
+  const response = await fetch(
+    `${API_BASE}/tickets`,
+    {
+      method: "POST",
+
+      headers: getHeaders(),
+
+      body: JSON.stringify({
+        subject,
+        message
+      })
+    }
+  );
+
+  const data =
+    await response.json();
+
+  if (!response.ok) {
+    throw new Error(
+      data.error ||
+        "خطا در ایجاد تیکت"
+    );
+  }
+
+  return data;
+}
+
+async function sendReply(
+  ticketId,
+  message
+) {
+  const response = await fetch(
+    `${API_BASE}/tickets/${ticketId}/replies`,
+    {
+      method: "POST",
+
+      headers: getHeaders(),
+
+      body: JSON.stringify({
+        message
+      })
+    }
+  );
+
+  const data =
+    await response.json();
+
+  if (!response.ok) {
+    throw new Error(
+      data.error ||
+        "خطا در ارسال پاسخ"
+    );
+  }
+
+  return data;
+}
+
+async function deleteTicket(ticketId) {
+  const response = await fetch(
+    `${API_BASE}/tickets/${ticketId}`,
+    {
+      method: "DELETE",
+      headers: getHeaders()
+    }
+  );
+
+  const data =
+    await response.json();
+
+  if (!response.ok) {
+    throw new Error(
+      data.error ||
+        "خطا در حذف تیکت"
+    );
+  }
+
+  return data;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 MAIN PAGE                                  */
+/* -------------------------------------------------------------------------- */
+
+function SupportTicketsPage() {
+  const {
+    isAuthenticated,
+    isLoading,
+    user
+  } = useAuth();
+
+  const [, navigate] =
+    useNavigate();
+
+  const [
+    selectedTicketId,
+    setSelectedTicketId
+  ] = React.useState(null);
+
+  const [
+    showCreateForm,
+    setShowCreateForm
+  ] = React.useState(false);
+
+  const [subject, setSubject] =
+    React.useState("");
+
+  const [message, setMessage] =
+    React.useState("");
+
+  const [reply, setReply] =
+    React.useState("");
+
+  const [page, setPage] =
+    React.useState(1);
+
+  const queryClient =
+    useQueryClient();
+
+  /* ----------------------------- LOADING STATE ---------------------------- */
+
+  if (isLoading) {
+    return null;
+  }
+
+  /* ------------------------------ AUTH CHECK ------------------------------ */
+
+  if (!isAuthenticated) {
+    navigate("/login");
+    return null;
+  }
+
+  /* ---------------------------------------------------------------------- */
+
+  return jsx.jsxs("div", {
+    className:
+      "max-w-4xl mx-auto px-3 sm:px-4 py-6 sm:py-10 space-y-4 sm:space-y-6",
+
+    children: [
+
+      /* ------------------------------ HEADER ------------------------------ */
+
+      jsx.jsxs("div", {
+        className:
+          "flex items-center justify-between gap-3",
+
+        children: [
+
+          /* ------------------------- LEFT SECTION ------------------------- */
+
+          jsx.jsxs("div", {
+            className:
+              "flex-1 min-w-0",
+
+            children: [
+
+              /* -------------------------- BACK BTN -------------------------- */
+
+              selectedTicketId &&
+                jsx.jsxs(Button, {
+                  variant: "ghost",
+                  size: "sm",
+
+                  onClick: () => {
+                    setSelectedTicketId(
+                      null
+                    );
+
+                    queryClient.invalidateQueries({
+                      queryKey: [
+                        "tickets"
+                      ]
+                    });
+                  },
+
+                  className:
+                    "gap-1.5 mb-1 -mr-2",
+
+                  children: [
+                    jsx.jsx(
+                      ChevronLeft,
+                      {
+                        className:
+                          "w-4 h-4 rotate-180"
+                      }
+                    ),
+
+                    "بازگشت"
+                  ]
+                }),
+
+              /* --------------------------- TITLE --------------------------- */
+
+              jsx.jsxs("h1", {
+                className:
+                  "text-xl sm:text-3xl font-bold font-display flex items-center gap-2",
+
+                children: [
+                  jsx.jsx(
+                    TicketIcon,
+                    {
+                      className:
+                        "w-6 h-6 sm:w-8 sm:h-8 text-primary shrink-0"
+                    }
+                  ),
+
+                  jsx.jsx("span", {
+                    className:
+                      "truncate",
+
+                    children:
+                      "تیکت‌های پشتیبانی"
+                  })
+                ]
+              }),
+
+              jsx.jsx("p", {
+                className:
+                  "text-muted-foreground mt-0.5 text-xs sm:text-sm",
+
+                children:
+                  "با تیم پشتیبانی GuardNET در ارتباط باشید"
+              })
+            ]
+          }),
+
+          /* ---------------------- CREATE TICKET BTN ---------------------- */
+
+          !selectedTicketId &&
+            jsx.jsxs(Button, {
+              onClick: () =>
+                setShowCreateForm(
+                  !showCreateForm
+                ),
+
+              size: "sm",
+
+              className:
+                "gap-1.5 shrink-0",
+
+              children: [
+                jsx.jsx(PlusIcon, {
+                  className:
+                    "w-4 h-4"
+                }),
+
+                jsx.jsx("span", {
+                  className:
+                    "hidden xs:inline",
+
+                  children:
+                    "تیکت جدید"
+                }),
+
+                jsx.jsx("span", {
+                  className:
+                    "xs:hidden",
+
+                  children: "جدید"
+                })
+              ]
+            })
+        ]
+      }),
+
+      /* -------------------------- CREATE FORM -------------------------- */
+
+      jsx.jsx(AnimatePresence, {
+        children:
+          showCreateForm &&
+          !selectedTicketId &&
+          jsx.jsx(
+            CreateTicketForm,
+            {
+              subject,
+              setSubject,
+
+              message,
+              setMessage,
+
+              onCancel: () => {
+                setShowCreateForm(
+                  false
+                );
+
+                setSubject("");
+                setMessage("");
+              },
+
+              onSuccess:
+                (ticketId) => {
+                  setShowCreateForm(
+                    false
+                  );
+
+                  setSubject("");
+                  setMessage("");
+
+                  queryClient.invalidateQueries({
+                    queryKey: [
+                      "tickets"
+                    ]
+                  });
+
+                  setSelectedTicketId(
+                    ticketId
+                  );
+                }
+            }
+          )
+      }),
+
+      /* ---------------------------- CONTENT ---------------------------- */
+
+      selectedTicketId
+        ? jsx.jsx(TicketDetails, {
+            ticketId:
+              selectedTicketId,
+
+            reply,
+            setReply,
+
+            isAdmin:
+              user?.role ===
+              "admin",
+
+            onBack: () => {
+              setSelectedTicketId(
+                null
+              );
+
+              queryClient.invalidateQueries({
+                queryKey: [
+                  "tickets"
+                ]
+              });
+            },
+
+            onReply: () => {
+              queryClient.invalidateQueries({
+                queryKey: [
+                  "ticket",
+                  selectedTicketId
+                ]
+              });
+            },
+
+            onDelete: () => {
+              setSelectedTicketId(
+                null
+              );
+
+              queryClient.invalidateQueries({
+                queryKey: [
+                  "tickets"
+                ]
+              });
+            }
+          })
+
+        : jsx.jsx(TicketsList, {
+            page,
+            setPage,
+
+            onSelect:
+              setSelectedTicketId
+          })
+    ]
+  });
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   EXPORT                                   */
+/* -------------------------------------------------------------------------- */
+
+export {
+  SupportTicketsPage as default
+};
